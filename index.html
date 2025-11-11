@@ -1,39 +1,256 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Roghaye Mojahedi Nejad — Consumer Behaviour Researcher</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roghaye Mojahedi Nejad — Researcher in Consumer Behaviour</title>
+  <meta name="description" content="Roghaye Mojahedi Nejad — MSc (Marketing), researcher in digital consumer behaviour. PhD applicant. CV, publications and contact." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#0b63c6;
+      --muted:#6b7280;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --glass: rgba(255,255,255,0.85);
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      background:linear-gradient(180deg, #f3f6fb 0%, #ffffff 100%);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .container{
+      max-width:1100px;
+      margin:36px auto;
+      padding:28px;
+    }
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .photo{
+      width:130px;height:130px;border-radius:12px;overflow:hidden;
+      flex:0 0 130px;box-shadow:0 8px 24px rgba(11,99,198,0.12);
+      background:linear-gradient(135deg,var(--accent),#4aa3ff);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px;
+    }
+    h1{margin:0;font-size:24px;}
+    .sub{color:var(--muted);margin-top:6px;font-size:14px;}
+    .actions{margin-left:auto;display:flex;gap:8px;align-items:center;}
+    .btn{
+      background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;box-shadow:0 6px 18px rgba(11,99,198,0.12);
+    }
+    .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(11,99,198,0.14);}
+    main{display:grid;grid-template-columns: 1fr 360px;gap:24px;margin-top:18px;}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.04);}
+    .about p{line-height:1.6;margin:0 0 8px 0}
+    section h2{margin-top:0;font-size:16px;color:#0f172a}
+    .list{margin:8px 0 0 0;padding:0;list-style:none}
+    .list li{padding:6px 0;border-bottom:1px dashed #eef2f7;font-size:14px;color:#111827}
+    .badge{display:inline-block;background:#eef6ff;color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px}
+    .skill{display:flex;align-items:center;justify-content:space-between;margin:10px 0}
+    .bar{height:10px;background:#eef2f7;border-radius:999px;flex:1;margin-left:12px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#67a5ff);border-radius:999px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .pub{margin-bottom:12px}
+    footer{margin-top:24px;text-align:center;color:var(--muted);font-size:13px}
+    /* responsive */
+    @media (max-width:980px){
+      main{grid-template-columns:1fr; }
+      .actions{order:2}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      .photo{width:96px;height:96px}
+    }
+    /* small touches */
+    .contact-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .chip{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:13px;color:#0b63c6}
+    a.link{color:var(--accent);text-decoration:none}
+    .meta{font-size:13px;color:var(--muted)}
+    .ref{font-size:14px;margin-bottom:8px}
+    .cv-link{display:inline-block;margin-top:10px}
+    .section-title{display:flex;align-items:center;justify-content:space-between}
+    .small{font-size:13px;color:var(--muted)}
+    .timeline{border-left:2px solid #eef2f7;padding-left:14px;margin-left:6px}
+    .timeline .item{margin-bottom:14px}
+  </style>
 </head>
 <body>
-  <header>
-    <img src="images/profile.jpg" alt="Roghaye Mojahedi Nejad" style="width:120px;border-radius:8px;">
-    <h1>Roghaye Mojahedi Nejad</h1>
-    <p>PhD Applicant | Researcher in Consumer Behaviour & Digital Marketing</p>
-    <p>Email: <a href="mailto:roghayemojahedinejaduni@gmail.com">roghayemojahedinejaduni@gmail.com</a></p>
-    <p><a href="cv/Roghaye_CV.pdf" target="_blank">Download CV (PDF)</a></p>
-  </header>
+  <div class="container">
+    <header>
+      <div class="photo" id="profilePhoto">RM</div>
+      <div>
+        <h1>Roghaye Mojahedi Nejad</h1>
+        <div class="sub">MSc in Business Administration (Marketing) — Researcher in Consumer Behaviour & Digital Marketing</div>
+        <div class="sub meta">PhD applicant • Research interests: digital trust, perceived risk, online decision-making</div>
+        <div style="margin-top:10px" class="contact-row">
+          <span class="chip">Ahvaz, Khuzestan, Iran</span>
+          <a class="chip link" href="mailto:roghayemojahedinejaduni@gmail.com">roghayemojahedinejaduni@gmail.com</a>
+          <a class="chip link" href="https://roghayemojahedinajaduni.github.io/research/" target="_blank">Personal site</a>
+        </div>
+      </div>
 
-  <section>
-    <h2>Research interests</h2>
-    <ul>
-      <li>Digital consumer behaviour: emotional trust & perceived risk</li>
-      <li>Affiliate marketing and recommender systems</li>
-      <li>Cross-cultural comparative studies</li>
-    </ul>
-  </section>
+      <div class="actions">
+        <a class="btn" href="cv/Roghaye_CV.pdf" target="_blank" id="downloadCv">Download CV (PDF)</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/roghayeh-mojahedinejad" target="_blank">LinkedIn</a>
+      </div>
+    </header>
 
-  <section>
-    <h2>Publications & Projects</h2>
-    <ul>
-      <li>MSc thesis: Examining Consumer Attitudes Toward Affiliate Marketing — Score 19/20</li>
-      <li>Article submitted to Elsevier (under review)</li>
-    </ul>
-  </section>
+    <main>
+      <div>
+        <div class="card about">
+          <div class="section-title"><h2>About</h2><span class="small">Researcher • Marketer • Educator</span></div>
+          <p>I am a dedicated researcher with a strong background in marketing management and over ten years of practical experience in sales and digital promotion of health and beauty products. My research focuses on digital consumer behaviour — especially how trust, emotion and cognition shape online purchase decisions in emerging markets.</p>
+          <p>My MSc thesis, <em>“Examining Consumer Attitudes Toward Affiliate Marketing Among Iranian Online Shoppers”</em>, received a grade of 19/20 and produced two submitted manuscripts. I combine qualitative and quantitative methods (interviews, thematic analysis, and SEM) to develop culturally-informed behavioural models.</p>
+          <p>Balancing family life as a mother and professional responsibilities has strengthened my resilience, time-management and leadership — qualities I bring to rigorous doctoral research.</p>
+        </div>
 
-  <footer>
-    <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a> • LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
-  </footer>
+        <div class="card" style="margin-top:18px">
+          <div class="section-title"><h2>Education</h2><span class="small">Academic background</span></div>
+          <div class="timeline">
+            <div class="item">
+              <strong>MSc in Business Administration (Marketing)</strong><div class="meta">University of Ilam, Ilam, Iran — 23 Sep 2023 – 22 Sep 2025</div>
+              <div class="small">Thesis: <em>Examining Consumer Attitudes Toward Affiliate Marketing Among Iranian Online Shoppers</em> — GPA: 15.67/20 • Thesis Grade: 19/20</div>
+            </div>
+            <div class="item">
+              <strong>BSc in Engineering Management</strong><div class="meta">Payame Noor University of Masjed Soleyman, Khuzestan — Oct 2007 – Jul 2011</div>
+              <div class="small">Final project: <em>A Management Model for Cooperatives</em> — Score: 19.5/20</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <div class="section-title"><h2>Experience</h2><span class="small">Professional roles</span></div>
+          <div style="margin-top:10px">
+            <div class="pub">
+              <strong>Marketing & Sales Manager / Specialist</strong>
+              <div class="meta">Various health & beauty distribution companies — Oct 2011 – Sep 2023</div>
+              <div class="small">Led marketing and sales operations focusing on market research, digital campaigns, distribution management and consumer insight. Designed strategies that increased online engagement and supported data-driven decisions across teams.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <div class="section-title"><h2>Publications (Selected)</h2><span class="small">Submitted / Under review</span></div>
+          <div style="margin-top:10px">
+            <div class="pub">
+              <strong>Mojahedi Nejad, R. (2025)</strong><div class="small"><em>A Study of Consumer Attitudes Toward Affiliate Marketing Among Iranian Internet Users.</em> Submitted to Journal of Retailing and Consumer Services (Elsevier).</div>
+            </div>
+            <div class="pub">
+              <strong>Mojahedi Nejad, R. (2025)</strong><div class="small"><em>Investigating the Role of Perceived Risk and Trust in Iranian Consumers’ Online Purchase Intention Based on the S–O–R Model.</em> Submitted to Kavosh-haye Bazargani (Business Research Journal), Yazd University.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <div class="section-title"><h2>Achievements & Awards</h2><span class="small">Academic & Extracurricular</span></div>
+          <ul class="list" style="margin-top:8px">
+            <li><strong>Academic:</strong> Admitted to a competitive government-funded MSc program; ranked among top candidates in national entrance exam; MSc thesis score 19/20.</li>
+            <li><strong>Sport:</strong> Earned multiple Taekwondo belts and medals representing city/provincial competitions; awarded by local municipality as exemplary student.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- right column -->
+      <aside>
+        <div class="card">
+          <h2>Skills</h2>
+          <div class="small">Technical & research skills</div>
+
+          <div class="skill"><div>Microsoft Word</div><div style="width:90px;text-align:right" class="small">Advanced</div></div>
+          <div class="skill"><div>Microsoft PowerPoint</div><div style="width:90px;text-align:right" class="small">Advanced</div></div>
+
+          <div class="skill"><div>Microsoft Excel</div><div style="width:90px;text-align:right" class="small">Intermediate</div></div>
+          <div class="bar" aria-hidden><i style="width:66%"></i></div>
+
+          <div class="skill"><div>SPSS</div><div style="width:90px;text-align:right" class="small">Intermediate</div></div>
+          <div class="bar" aria-hidden><i style="width:66%"></i></div>
+
+          <div style="margin-top:12px" class="skill"><div>Digital Marketing</div><div style="width:90px;text-align:right" class="small">Advanced</div></div>
+          <div class="bar" aria-hidden><i style="width:80%"></i></div>
+
+          <div style="margin-top:12px" class="skill"><div>Consumer Behaviour Research</div><div style="width:90px;text-align:right" class="small">Advanced</div></div>
+          <div class="bar" aria-hidden><i style="width:80%"></i></div>
+
+          <div style="margin-top:12px" class="skill"><div>Academic Writing</div><div style="width:90px;text-align:right" class="small">Advanced</div></div>
+          <div class="bar" aria-hidden><i style="width:80%"></i></div>
+
+          <div style="margin-top:14px">
+            <h3 style="margin:0 0 8px 0;font-size:15px">Certifications</h3>
+            <ul class="small" style="padding-left:14px;margin:0">
+              <li>ICDL (Computer Skills)</li>
+              <li>Modern Marketing & Emerging Technologies</li>
+              <li>Blockchain & Cryptocurrencies in International Trade</li>
+              <li>Exporting Goods & Services; Customs Regulations</li>
+              <li>Electronic Business Office Systems</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:14px">
+            <h3 style="margin:0 0 8px 0;font-size:15px">Memberships</h3>
+            <div class="small">Member, Iranian Marketing Association (ISMA)</div>
+            <div class="small" style="margin-top:6px">Member, Iranian Management Engineering Organization (IMEO)</div>
+          </div>
+
+          <div style="margin-top:14px">
+            <h3 style="margin:0 0 8px 0;font-size:15px">Contact</h3>
+            <div class="small">Email: <a class="link" href="mailto:roghayemojahedinejaduni@gmail.com">roghayemojahedinejaduni@gmail.com</a></div>
+            <div class="small">Phone: +98 937 819 0408</div>
+            <div class="small">Location: Ahvaz, Khuzestan, Iran</div>
+            <div class="cv-link"><a class="link" href="cv/Roghaye_CV.pdf" target="_blank">Download full CV (PDF)</a></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h2>References</h2>
+          <div class="ref">
+            <strong>Dr. Mohammad Aidi</strong><div class="small">Assistant Professor, Department of Management — University of Ilam</div>
+            <div class="small">Email: m.aidi@ilam.ac.ir • +98 918 141 3219</div>
+          </div>
+          <div class="ref">
+            <strong>Dr. Esfandiar Mohammadi</strong><div class="small">Associate Professor, Department of Management — University of Ilam</div>
+            <div class="small">Email: e.mohamadi@ilam.ac.ir • +98 918 341 0847</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h2>Quick Links</h2>
+          <ul style="padding-left:14px;margin:6px 0 0 0" class="small">
+            <li><a class="link" href="#Publications">Publications</a></li>
+            <li><a class="link" href="#Education">Education</a></li>
+            <li><a class="link" href="mailto:roghayemojahedinejaduni@gmail.com">Contact me</a></li>
+          </ul>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Roghaye Mojahedi Nejad — All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // small interactive touches
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Optionally replace initials photo with real image if exists
+    (function(){
+      const imgPath = 'images/profile.jpg'; // replace if you upload profile image
+      fetch(imgPath, {method:'HEAD'}).then(r=>{
+        if(r.ok){
+          const el = document.getElementById('profilePhoto');
+          el.style.background = 'none';
+          el.innerHTML = '<img src="'+imgPath+'" alt="profile" style="width:100%;height:100%;object-fit:cover;border-radius:12px">';
+        }
+      }).catch(()=>{});
+    })();
+  </script>
 </body>
 </html>
